@@ -1,9 +1,44 @@
-#include "list_stack.h"
-#include "list_queue.h"
+/******************************************************************************
+ *
+ *  A generic stack and queue using a singly linked list.
+ *
+ * Based on the source code from Robert Sedgewick and Kevin Wayne at https://algs4.cs.princeton.edu/
+ *
+ *  % ./list_tests
+ * STACK Tests
+ * -----------
+ *        Top of stack: 2
+ *        Top of stack: 10
+ *        Pop of stack: 10
+ *        Pop of stack: 12
+ *    is_empty (stack): 1
+ *        Top of stack: example
+ *        Top of stack: an
+ *        Pop of stack: an
+ *        Pop of stack: is
+ *        Pop of stack: This
+ *
+ * QUEUE Tests
+ * -----------
+ *      Front of queue: 12
+ *      Front of queue: 10
+ *      Dequeued value: 10
+ *      Dequeued value: 2
+ *    is_empty (queue): 1
+ *      Front of queue: This
+ *      Front of queue: is
+ *      Dequeued value: is
+ *      Dequeued value: an
+ *      Dequeued value: example
+ *
+ ******************************************************************************/
 
 #include <iomanip>
 #include <iostream>
 #include <string>
+
+#include "list_queue.h"
+#include "list_stack.h"
 
 using namespace std;
 
@@ -81,13 +116,15 @@ void test_string_queue(void) {
     return;
 }
 
-
 int main(void) {
-    cout << "STACK Tests" << endl << "-----------" << endl;
+    cout << "STACK Tests" << endl
+         << "-----------" << endl;
     test_int_stack();
     test_string_stack();
 
-    cout << endl << "QUEUE Tests" << endl << "-----------" << endl;
+    cout << endl
+         << "QUEUE Tests" << endl
+         << "-----------" << endl;
     test_int_queue();
     test_string_queue();
 

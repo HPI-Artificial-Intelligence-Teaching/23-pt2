@@ -1,3 +1,23 @@
+/******************************************************************************
+ *
+ *  A generic stack using a resize-able array.
+ *
+ * Based on the source code from Robert Sedgewick and Kevin Wayne at https://algs4.cs.princeton.edu/
+ *
+ *  % ./stack 
+ *        Top of stack: 2
+ *        Top of stack: 10
+ *        Pop of stack: 10
+ *        Pop of stack: 12
+ *    is_empty (stack): 1
+ *        Top of stack: example
+ *        Top of stack: an
+ *        Pop of stack: an
+ *        Pop of stack: is
+ *        Pop of stack: This
+ *
+ ******************************************************************************/
+
 #include "stack.h"
 
 #include <iomanip>

@@ -1,3 +1,11 @@
+/******************************************************************************
+ *
+ *  A generic stack using a resize-able array.
+ *
+ * Based on the source code from Robert Sedgewick and Kevin Wayne at https://algs4.cs.princeton.edu/
+ *
+ ******************************************************************************/
+
 #ifndef __STACK_H__
 #define __STACK_H__
 

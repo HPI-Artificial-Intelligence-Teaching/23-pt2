@@ -1,3 +1,23 @@
+/******************************************************************************
+ *
+ *  A generic queue using a fixed-size array.
+ *
+ * Based on the source code from Robert Sedgewick and Kevin Wayne at https://algs4.cs.princeton.edu/
+ *
+ *  % ./queue
+ *       Front of queue: 12
+ *      Front of queue: 10
+ *      Dequeued value: 10
+ *      Dequeued value: 2
+ *    is_empty (queue): 1
+ *      Front of queue: This
+ *      Front of queue: is
+ *      Dequeued value: is
+ *      Dequeued value: an
+ *      Dequeued value: example
+ *
+ ******************************************************************************/
+
 #include "queue.h"
 
 #include <iomanip>
