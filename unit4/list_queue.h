@@ -24,7 +24,7 @@ class Queue {
     } *head, *last;
 
     // copys an existing list
-    const List* deep_copy_list(const List* new_head, const List* new_last) const {
+    List* deep_copy_list(List* new_head, List* new_last) const {
         // set the last pointer
         if (new_head == new_last)
             last = head;
@@ -32,7 +32,10 @@ class Queue {
         // copy the list by first deep-copying the tail and then linking it
         if (new_head) {
             auto tail = deep_copy_list(new_head->next, new_last);
-            return (new List(new_head->data, tail));
+            List* head = new List();
+            head->data = new_head->data;
+            head->next = tail;
+            return (head);
         }
 
         return (nullptr);

@@ -24,10 +24,13 @@ class Stack {
     }* head;
 
     // copys an existing list
-    const List* deep_copy_list(const List* new_head) const {
+    List* deep_copy_list(List* new_head) const {
         if (new_head) {
             auto tail = deep_copy_list(new_head->next);
-            return (new List(new_head->data, tail));
+            List* head = new List();
+            head->data = new_head->data;
+            head->next = tail;
+            return (head);
         }
 
         return (nullptr);
