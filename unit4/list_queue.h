@@ -99,7 +99,7 @@ class Queue {
     // enqueue method
     void enqueue(const T& x) {
         List* old_last = last;
-        last = new List;
+        last = new List();
         last->data = x;
         last->next = nullptr;
         if (is_empty())

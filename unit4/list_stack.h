@@ -87,7 +87,7 @@ class Stack {
 
     // push method
     void push(const T& x) {
-        List* new_head = new List;
+        List* new_head = new List();
         new_head->data = x;
         new_head->next = head;
         head = new_head;

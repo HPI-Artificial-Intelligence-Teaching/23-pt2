@@ -99,7 +99,7 @@ class Bag {
 
     // adds the item to the bag
     void add(const T& item) {
-        List* new_head = new List;
+        List* new_head = new List();
         new_head->item = item;
         new_head->next = head;
         head = new_head;
