@@ -135,8 +135,8 @@ class Bag {
        private:
         List* m_ptr;
     };
-    Iterator begin() { return Iterator(head); }
-    Iterator end() { return Iterator(nullptr); }
+    Iterator begin() const { return Iterator(head); }
+    Iterator end() const { return Iterator(nullptr); }
 };
 
 #endif

@@ -24,7 +24,7 @@ class Stack {
     }* head;
 
     // copys an existing list
-    List* deep_copy_list(List* new_head) const {
+    List* deep_copy_list(List* new_head) {
         if (new_head) {
             auto tail = deep_copy_list(new_head->next);
             List* head = new List();
@@ -142,8 +142,8 @@ class Stack {
        private:
         List* m_ptr;
     };
-    Iterator begin() { return Iterator(head); }
-    Iterator end() { return Iterator(nullptr); }
+    Iterator begin() const { return Iterator(head); }
+    Iterator end() const { return Iterator(nullptr); }
 };
 
 #endif

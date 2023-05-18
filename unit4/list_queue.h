@@ -24,7 +24,7 @@ class Queue {
     } *head, *last;
 
     // copys an existing list
-    List* deep_copy_list(List* new_head, List* new_last) const {
+    List* deep_copy_list(List* new_head, List* new_last) {
         // set the last pointer
         if (new_head == new_last)
             last = head;
@@ -159,8 +159,8 @@ class Queue {
        private:
         List* m_ptr;
     };
-    Iterator begin() { return Iterator(head); }
-    Iterator end() { return Iterator(nullptr); }
+    Iterator begin() const { return Iterator(head); }
+    Iterator end() const { return Iterator(nullptr); }
 };
 
 #endif
