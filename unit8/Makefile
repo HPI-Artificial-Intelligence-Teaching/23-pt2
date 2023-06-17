@@ -1,4 +1,4 @@
-TARGETS = btree freq_counter_bst freq_counter_redblack_bst 
+TARGETS = btree freq_counter_bst freq_counter_redblack_bst min_pq_test heap_test
 CXX = g++
 CPPFLAGS = -std=c++17 -O3
 LDLIBS=-lm
