@@ -21,6 +21,9 @@ class Bag {
     struct List {
         T item;
         List* next;
+
+        // constructor with values
+        List(const T& _item, List* _next = nullptr) : item(_item), next(_next) {}
     }* head;
     int n;  // number of elements in the bag
 
@@ -64,6 +67,7 @@ class Bag {
     Bag& operator=(const Bag& b) {
         // free the existing bag
         free_list();
+
         // copy the bag passed in
         head = deep_copy_list(b.head);
         n = b.n;
@@ -88,21 +92,18 @@ class Bag {
     }
 
     // is_empty method
-    const bool is_empty(void) const {
+    bool is_empty() const {
         return (head == nullptr);
     }
 
     // size method
-    const int size(void) const {
+    int size() const {
         return (n);
     }
 
     // adds the item to the bag
     void add(const T& item) {
-        List* new_head = new List();
-        new_head->item = item;
-        new_head->next = head;
-        head = new_head;
+        head = new List(item, head);
         n++;
         return;
     }
