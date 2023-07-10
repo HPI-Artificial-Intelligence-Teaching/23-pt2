@@ -28,7 +28,7 @@ class Bag {
     int n;  // number of elements in the bag
 
     // copys an existing list
-    const List* deep_copy_list(const List* new_head) const {
+    const List* deep_copy_list(const List* new_head) {
         if (new_head) {
             auto tail = deep_copy_list(new_head->next);
             return (new List(new_head->data, tail));
