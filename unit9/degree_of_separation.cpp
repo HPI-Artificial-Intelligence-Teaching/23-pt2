@@ -18,7 +18,7 @@
  *  EWR
  *     Not in database.
  *
- *  % /degree_of_separation ../data/movies.txt "/" "Bacon, Kevin"
+ *  % ./degree_of_separation ../data/movies.txt "/" "Bacon, Kevin"
  *  Kidman, Nicole
  *     Bacon, Kevin
  *     Woodsman, The (2004)
