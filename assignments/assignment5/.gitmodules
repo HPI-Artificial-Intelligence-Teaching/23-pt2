@@ -1,3 +1,0 @@
-[submodule ".vscode/doctest"]
-	path = .vscode/doctest
-	url = https://github.com/doctest/doctest.git
