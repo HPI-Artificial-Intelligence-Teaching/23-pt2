@@ -17,8 +17,8 @@ using namespace std;
 // Implements a min oriented indexed priority queue using a binary heap
 template <typename T>
 class IndexMinPQ {
-    int n;         // number of items on priority queue
     int capacity;  // total capacity of the heap
+    int n;         // number of items on priority queue
     int* pq;       // binary heap using 1-based indexing
     int* qp;       // inverse of pq such that qp[pq[i]] = pq[qp[i]] = i
     T* keys;       // keys[i] = priority of i

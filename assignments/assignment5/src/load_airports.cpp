@@ -1,3 +1,8 @@
+#include <iomanip>
+#include <sstream>
+#include <string>
+#include <vector>
+
 #include "vlib/bag.h"
 #include "weighted_struct_digraph.h"
 
